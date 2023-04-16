@@ -1,11 +1,15 @@
-const express = require('express')
-const app = express()
-const port = 3000
-app.use('/static', express.static(''))
-app.get('/', (req, res) => {
-  res
-})
+const http = require('http');
+const express = require('express');
+const path = require('path');
+const app = express();
+app.use(express.json());
+app.use(express.static("express"));
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+app.use('/', function(req,res){
+    res.sendFile(path.join(__dirname+'/frontend/myWeb.html'));
+    
+  });
+const server = http.createServer(app);
+const port = 3000;
+server.listen(port);
+console.debug('Server listening on port ' + port);

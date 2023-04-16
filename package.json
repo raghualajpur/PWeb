@@ -1,6 +1,8 @@
 {
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "http": "^0.0.1-security",
+    "path": "^0.12.7"
   },
   "scripts": {
     "start": "node server.js"
@@ -8,7 +10,6 @@
   "name": "pweb",
   "version": "1.0.0",
   "main": "server.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/raghualajpur/pWeb.git"
